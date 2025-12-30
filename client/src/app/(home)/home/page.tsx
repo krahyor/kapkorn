@@ -2,6 +2,7 @@
 
 import * as Sentry from "@sentry/nextjs";
 import { Button } from "@/components/ui/button";
+import { logoutAction } from "@/app/(auth)/logout/action";
 
 export default function HomePage() {
     const testSentryError = () => {
@@ -25,6 +26,10 @@ export default function HomePage() {
 
                 <Button onClick={testSentryError} variant="outline">
                     Test Sentry Error (throws)
+                </Button>
+
+                <Button onClick={() => logoutAction()} variant="outline">
+                    Logout
                 </Button>
             </div>
         </div>
