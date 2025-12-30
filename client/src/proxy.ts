@@ -27,7 +27,7 @@ export default auth((request) => {
   if (isPublicRoute(pathname)) {
     // If user is authenticated and trying to access login, redirect to returnUrl or dashboard
     if (pathname === ROUTES.LOGIN && isAuthenticated) {
-      const returnUrl = request.nextUrl.searchParams.get('returnUrl') || ROUTES.DASHBOARD.ROOT;
+      const returnUrl = request.nextUrl.searchParams.get('returnUrl') || ROUTES.HOME;
       return NextResponse.redirect(new URL(returnUrl, request.url));
     }
     return NextResponse.next();

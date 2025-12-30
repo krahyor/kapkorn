@@ -19,7 +19,7 @@ export default function Home() {
             router.push(ROUTES.LOGIN);
         } else {
             // User is authenticated, redirect to dashboard
-            router.push(ROUTES.DASHBOARD.ROOT);
+            router.push(ROUTES.HOME);
         }
     }, [router]);
 

@@ -266,7 +266,7 @@ ${errorDetails.componentStack ? `Component Stack:\n${errorDetails.componentStack
                                     <RefreshCw className="h-4 w-4" />
                                     ลองใหม่อีกครั้ง {retryCount > 0 && `(${retryCount})`}
                                 </Button>
-                                <Link href={ROUTES.DASHBOARD.ROOT}>
+                                <Link href={ROUTES.HOME}>
                                     <Button variant="outline" className="gap-2">
                                         <Home className="h-4 w-4" />
                                         กลับหน้าหลัก
